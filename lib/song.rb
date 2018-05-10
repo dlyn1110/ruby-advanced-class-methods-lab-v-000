@@ -47,6 +47,7 @@ class Song
     info << parsed[1].chomp(".mp3")
     info
   end
+
   def self.new_from_filename(filename)
     song = self.new_by_name(self.parse(filename)[1])
     song.artist_name = self.parse(filename)[0]
